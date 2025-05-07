@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modify Seat</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>Modify Seat for Booking ID: <span th:text="${booking.id}"></span></h1>
+    <form th:action="@{'/modifySeat/' + ${booking.id}}" method="post">
+        <label for="seatNumber">New Seat Number:</label>
+        <input type="text" id="seatNumber" name="seatNumber" th:value="${booking.seatNumber}" required>
+        <button type="submit" style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+            Save Changes
+        </button>
+    </form>
+    <a href="/user/dashboard">
+        <button style="background-color: blue; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+            Cancel
+        </button>
+    </a>
+</body>
+</html>

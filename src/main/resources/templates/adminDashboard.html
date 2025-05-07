@@ -1,0 +1,25 @@
++<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <h2>All Bookings</h2>
+    <table>
+        <tr>
+            <th>Booking ID</th>
+            <th>Flight ID</th>
+            <th>Seat Number</th>
+            <th>Booked By</th>
+        </tr>
+        <tr th:each="booking : ${bookings}">
+            <td th:text="${booking.id}"></td>
+            <td th:text="${booking.flight.id}"></td>
+            <td th:text="${booking.seatNumber}"></td>
+            <td th:text="${booking.bookedBy}"></td>
+        </tr>
+    </table>
+</body>
+</html>

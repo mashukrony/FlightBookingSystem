@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>User Dashboard</h1>
+    <h2>Search for Flights</h2>
+    <form action="/searchFlights" method="get">
+        <button type="submit">Search Flights</button>
+    </form>
+
+    <h2>Your Bookings</h2>
+    <table>
+        <tr>
+            <th>Booking ID</th>
+            <th>Flight ID</th>
+            <th>Seat Number</th>
+            <th>Booked By</th>
+            <th>Action</th>
+        </tr>
+        <tr th:each="booking : ${bookings}">
+            <td th:text="${booking.id}"></td>
+            <td th:text="${booking.flight.id}"></td>
+            <td th:text="${booking.seatNumber}"></td>
+            <td th:text="${booking.bookedBy}"></td>
+            <td>
+                <a href="/payment" style="color: white; text-decoration: none;">
+                    <button style="background-color: red; color: white; border: none; padding: 5px 10px; cursor: pointer;">
+                        Pay Now
+                    </button>
+                </a>
+                <a th:href="@{'/modifySeat/' + ${booking.id}}" style="color: white; text-decoration: none;">
+                    <button style="background-color: blue; color: white; border: none; padding: 5px 10px; cursor: pointer;">
+                        Modify Seat
+                    </button>
+                </a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

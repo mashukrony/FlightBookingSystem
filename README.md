@@ -66,10 +66,6 @@ mvn spring-boot:run
 ```
 Access at: `http://localhost:8080`  
 
----
-
-## 📸 Screenshot  
-![Flight UI](./assets/FlightBookingHome.png)
 
 ---
 

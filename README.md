@@ -1,7 +1,7 @@
 # ✈️ Flight Booking System  
 *A full-stack flight management platform with seat selection, booking tracking, and admin controls.*  
 
-![Flight Booking System Demo](https://i.imgur.com/0qr3mGu.png)  
+![Flight Booking System Demo](https://i.imgur.com/0qr3mGu)  
 
 ---
 
@@ -69,7 +69,7 @@ Access at: `http://localhost:8080`
 ---
 
 ## 📸 Screenshot  
-![Flight Booking Interface](https://i.imgur.com/0qr3mGu.png)  
+![Flight Booking Interface](https://i.imgur.com/0qr3mGu)  
 
 ---
 

@@ -24,7 +24,7 @@
 
 ### `flight` Table  
 ```sql
-CREATE TABLE flight (
+CREATE TABLE --name-- (
   id BIGINT PRIMARY KEY AUTO_INCREMENT,
   arrival_time DATETIME(6),
   available_seats INT NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE flight (
 
 ### `booking` Table  
 ```sql
-CREATE TABLE booking (
+CREATE TABLE --name-- (
   id VARCHAR(255) PRIMARY KEY,
   booked_by VARCHAR(255),
   seat_number VARCHAR(255),
